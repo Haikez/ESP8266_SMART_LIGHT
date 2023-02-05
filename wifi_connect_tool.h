@@ -38,6 +38,7 @@ void write_eeprom() //写入函数
       {
         //int data = addr%256; //在该代码中等同于int data = addr;因为下面write方法是以字节为存储单位的.
         //String(smart_data).charAt(addr);
+        // EEPROM.write(addr, toascii(String(smart_data).charAt(addr-300))); //写数据
         EEPROM.write(addr, toascii(String(smart_data).charAt(addr-300))); //写数据
 		delay(50);
 	  }
